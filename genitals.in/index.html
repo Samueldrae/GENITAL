@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> $GENITAL</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="/gen.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/gen.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/gen.png">
+    <link rel="manifest" href="img/site.webmanifest">
+
+    <meta property="fb:admins" content="132951670226590">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&amp;family=Karla:wght@400;500;800&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="css/app.min.css">
+    <script>
+        var viewportmeta = document.querySelector('meta[name="viewport"]');
+        if (viewportmeta) {
+            if (screen.width < 375) {
+                var newScale = screen.width / 375;
+                viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+            } else {
+                viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <style>
+        @media(min-width:1481px) {
+            .heroimg {
+                background-image: url(img/hero-3.jpg);
+                background-size: contain;
+                width: 50%;
+                background-repeat: no-repeat;
+                background-position: right;
+            }
+            .heroimgsmall,
+            .heroimgmobile {
+                display: none;
+            }
+            .hero {
+                margin-top: 160px;
+            }
+            .blockimgmo {
+                display: none;
+            }
+        }
+
+        @media(max-width: 1480px) {
+            .heroimgsmall {
+                background-image: url(img/hero-3.jpg);
+                background-size: contain;
+                width: 56%;
+                background-repeat: no-repeat;
+                background-position: right;
+            }
+            .quality__wrap.herooo {
+                max-width: 42%;
+            }
+            .development__list {
+                zoom: 0.9;
+            }
+            .heroimg,
+            .heroimgmobile {
+                display: none;
+            }
+            .hero {
+                margin-top: 100px;
+            }
+            .blockimgmo {
+                display: none;
+            }
+        }
+
+        @media(max-width: 980px) {
+            .heroimgmobile {
+                order: 1;
+                background-image: url(img/hero-3m.jpg);
+                background-size: contain;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-position: left;
+                display: block;
+            }
+            .heroimgsmall,
+            .heroimg {
+                display: none;
+            }
+            .hero {
+                margin-top: 60px;
+            }
+            .fit {
+                padding: 0px !important;
+            }
+            .blockimgmo {
+                display: block;
+            }
+            .blockimg {
+                display: none;
+            }
+            .quality__item:not(:last-child) {
+                margin-bottom: 0px;
+            }
+            .description__item.aos-init.aos-animate {
+                display: flex;
+                flex-flow: column;
+            }
+            .description__wrap {
+                order: 2;
+            }
+            .description__preview.aos-init.aos-animate {
+                order: 1;
+            }
+            .posts__preview img {
+                margin: 0px;
+                border-radius: 10px;
+                width: 100%;
+                height: fit-content;
+                object-fit: cover;
+            }
+            .posts__preview {
+                padding: 20px;
+            }
+        }
+
+        .blockimg,
+        .blockimgmo {
+            background-image: url(img/block-2.png);
+            background-size: contain;
+            width: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip img {
+            width: 20px;
+            margin-left: 5px;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            background-color: #222325;
+            font-size: 10px;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 10px;
+            position: absolute;
+            top: -12px;
+            left: 23px;
+            z-index: 1;
+            position: absolute;
+            z-index: 1;
+            margin-left: 10px;
+        }
+
+        .tooltip.active .tooltiptext {
+            visibility: visible;
+        }
+
+        .contract {
+            display: flex;
+        }
+
+        #sample {
+            font-size: 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- page-->
+    <div class="page" id="page">
+        <!-- header-->
+        <!-- header-->
+        <header class="header js-header">
+            <div class="header__container container" data-scroll-lock-scrollable data-scroll-lock-fill-gap><a class="header__logo" href=""><img style="width: 50px;" src="img/luffyv33.png" alt="Luffy"></a>
+                <button class="header__burger js-header-burger"><span></span><span></span>
+          </button>
+                <div class="header__wrapper js-header-wrapper">
+                    <div class="header__inner container">
+                        <nav class="header__nav"><a class="header__link h2 active" href="#">Home</a>
+                            <a class="header__link h2" href="#about">About</a>
+
+                           
+
+
+                            <a class="header__link h2" href="#token" target="_blank">Tokenomics</a>
+
+                        </nav>
+                        <div class="header__line">
+                            <!-- socials-->
+                            <div class="socials">
+                                <a class="socials__link" href="https://pump.fun/coin/2jfFXLwPTNZjqX6paQeiHwEKM1Qe44Qh7vZDSMkLpump" target="_blank">
+                <svg class="icon icon-twitter">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg></a><a class="socials__link" href="https://t.me/genitalsol" target="_blank">
+                <svg class="icon icon-telegram">
+                  <use xlink:href="#icon-telegram"></use>
+                </svg></a>
+
+                                <!-- <a class="socials__link" href="https://www.reddit.com/r/luffy_inu/" target="_blank">
+                <svg class="icon icon-reddit">
+                  <use xlink:href="#icon-reddit"></use>
+                </svg></a><a class="socials__link" href="https://medium.com/@luffytokenofficial" target="_blank">
+                <svg class="icon icon-medium">
+                  <use xlink:href="#icon-medium"></use>
+                </svg></a><a class="socials__link" href="https://discord.gg/S9Exh6We" target="_blank">
+                <svg class="icon icon-discord">
+                  <use xlink:href="#icon-discord"></use>
+                </svg></a><a class="socials__link" href="https://instagram.com/luffytoken" target="_blank">
+                <svg class="icon icon-insta">
+                  <use xlink:href="#icon-insta"></use>
+                </svg></a><a class="socials__link" href="https://www.facebook.com/groups/1254762111629194/" target="_blank">
+                <svg class="icon icon-facebook">
+                  <use xlink:href="#icon-facebook"></use>
+                </svg></a>
+             -->
+
+                            </div>
+
+                        </div>
+                        <div class="header__lines"><img src="img/menu-lines.svg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- container-->
+        <div class="page__container">
+            <style>
+                @font-face {
+                    font-family: head;
+                    src: url(/head.otf);
+                }
+
+                .head {
+                    font-family: head;
+                }
+            </style>
+            <!-- quality-->
+            <div class="section quality hero" style="margin-bottom:0px" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="0">
+                <div class="quality__container container">
+                    <div class="quality__item">
+                        <div class="quality__wrap herooo">
+                            <div class="quality__content content">
+                                <h2 style="font-family: head;">$GENITAL</h2>
+                                <p>
+                                    Everyone has gotta take care of their $GENITAL.
+                                </p>
+                                <div class="quality__line">
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="heroimg">
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                            <!-- <lottie-player src="https://lottie.host/6944ca63-8a15-4020-92f6-0c23ff1b4f3f/YDoPy6rmug.json" background="transparent" speed="1" style="width: 700px; height: 700px;" loop autoplay></lottie-player>
+                        -->
+                            <img src="/gen.png" alt="">
+                        </div>
+
+                        <div class="heroimgsmall">
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                            <lottie-player src="https://lottie.host/6944ca63-8a15-4020-92f6-0c23ff1b4f3f/YDoPy6rmug.json" background="transparent" speed="1" style="width: 500px; height: 600px; float:right;" loop autoplay></lottie-player>
+                        </div>
+
+                        <div class="heroimgmobile">
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                            <lottie-player src="https://lottie.host/6944ca63-8a15-4020-92f6-0c23ff1b4f3f/YDoPy6rmug.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></lottie-player>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- statistics-->
+            <!-- <div class="section statistics" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="0">
+                <div class="statistics__container container">
+                    <div class="statistics__wrapper">
+                        <div class="statistics__list">
+                            <div class="statistics__item" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="0">
+                                <div class="statistics__value h3">$<span id="mcap"> </span>M</div>
+                                <div class="statistics__title title">Marketcap</div>
+                            </div>
+                            <div class="statistics__item" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="200">
+                                <div class="statistics__value h3">$<span id="luffyprice"> </span></div>
+                                <div class="statistics__title title">Price</div>
+                            </div>
+                            <div class="statistics__item" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="300">
+                                <div class="statistics__value h3">$<span id="luffydaily"> </span></div>
+                                <div class="statistics__title title">Daily Volume</div>
+                            </div>
+                            <div class="statistics__item" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="400">
+                                <div class="statistics__value h3">100B</div>
+                                <div class="statistics__title title">Supply</div>
+                            </div>
+                            <div class="statistics__item" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="500">
+                                <div class="statistics__value h3">37.5%</div>
+                                <div class="statistics__title title">Burn rate</div>
+                            </div>
+                            <div class="statistics__item" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="600">
+                                <div class="statistics__value h3">
+                                    <div class="contract">
+                                        <p>0x54..d7 </p>
+                                        <p id="sample">0x54012cdf4119de84218f7eb90eeb87e25ae6ebd7</p>
+                                        <a href="#" onclick="CopyToClipboard('sample');return false;">
+                                            <div class="tooltip"><img src="https://woof-meister.com/wp-content/uploads/2023/03/copy-1.png" />
+                                                <div class="tooltiptext">
+                                                    Copied!
+
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="statistics__title title">Contract</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- development-->
+
+            <!-- description-->
+            <div class="section description">
+                <div class="details__anchor anchor" id="description"></div>
+                <div class="description__container container" id="about">
+                    <div class="description__list">
+                        <div class="description__item" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="0">
+                            <div class="description__wrap">
+                                <div class="description__content content ">
+                                    <h2 class="fit">About $GENITAL</h2>
+                                    <p>
+                                        EVERYONE GOT A  $GENITAL....
+                                    </p>
+                                    <p>
+                                        It is your sole responsibility to invest in your $GENITAL...
+                                    </p>
+                                </div>
+
+                                <!-- <button class="button-49" onclick="location.href='https://luffytoken.com/buy'" type="button"><span>How to buy</span></button>
+                   -->
+                            </div>
+                            <div class="">
+                                <img src="img/luffyv33.png" alt="">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- quality-->
+            <!-- <div class="section quality" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="0">
+                <div class="quality__container container layer">
+                    <div class="quality__item">
+
+                    </div>
+                    <div class="quality__item">
+                        <div class="quality__wrap" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="200">
+                            <div class="quality__content content">
+                                <h2>Luffy Chain</h2>
+
+                                <p>We believe in Web3 for all. Our layer-2 blockchain is designed to offer fast and scalable transactions with low fees, utilizing innovative state channel technology. </p>
+                                <p>Luffy Chain enables developers to build scalable user-friendly dApps, Tokens, NFTs, and staking opportunities, incentivizing long-term investment in the ecosystem.</p>
+                            </div>
+
+                        </div>
+                        <div class="quality__preview">
+
+
+                            <div class="blockimg">
+                                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                                <lottie-player src="https://lottie.host/4678efe2-6482-4895-83b9-3bbb7f6ded77/ggZW1Lhdag.json" background="transparent" speed="1" style="width: 600px; height: 600px; padding:100px" loop autoplay></lottie-player>
+                            </div>
+
+                            <div class="blockimgmo">
+                                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                                <lottie-player src="https://lottie.host/4678efe2-6482-4895-83b9-3bbb7f6ded77/ggZW1Lhdag.json" background="transparent" speed="1" style="width: 450px; height: 450px; padding:0px" loop autoplay></lottie-player>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- solutions-->
+            <div class="section solutions">
+                <div class="solutions__container container">
+                    <div class="solutions__head" id="token">
+                        <h2 class="development__title h2">Tokenomics</h2>
+                    </div>
+                    <div class="solutions__list">
+                        <!-- card-->
+                        <div class="solutions__card card card_small" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="0">
+                            <div class="card__background"></div>
+                            <div class="card__square" style="background:#4b0702"></div>
+                            <svg class="card__corner" preserveAspectRatio="none" width="77" height="124" viewBox="0 0 77 124">
+                                <path d="M35.453 9.373C29.455 3.371 21.32 0 12.839 0H.116C.113 0 .127 0 .16 0v100h76.956V64.314a32.01 32.01 0 0 0-9.368-22.627L35.453 9.373z"></path>
+                              </svg>
+                            <div class="card__inner">
+
+                                <div class="status" style="color:#89EB5B">0%</div>
+                                <div class="solutions__title h3 head">BUY/SELL TAX</div>
+
+                                <div class="solutions__content">0% on all Buy or Sell Transactions</div>
+                            </div>
+                        </div>
+                        <!-- card-->
+                        <div class="solutions__card card card_small" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="200">
+                            <div class="card__background"></div>
+                            <div class="card__square" style="background:#89EB5B"></div>
+                            <svg class="card__corner" preserveAspectRatio="none" width="77" height="124" viewBox="0 0 77 124">
+                                <path d="M35.453 9.373C29.455 3.371 21.32 0 12.839 0H.116C.113 0 .127 0 .16 0v100h76.956V64.314a32.01 32.01 0 0 0-9.368-22.627L35.453 9.373z"></path>
+                              </svg>
+                            <div class="card__inner">
+
+                                <div class="status " style="color:#89EB5B">Renounced</div>
+                                <div class="solutions__title head h3">CONTRACT SAFETY</div>
+
+                                <!-- <div class="solutions__content">Purchase Luffy on 0% tax - Giving all new Luffy holders the best experience!</div>
+                             -->
+                            </div>
+                        </div>
+                        <!-- card-->
+                        <div class="solutions__card card card_small" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="400">
+                            <div class="card__background"></div>
+                            <div class="card__square" style="background:#89EB5B"></div>
+                            <svg class="card__corner" preserveAspectRatio="none" width="77" height="124" viewBox="0 0 77 124">
+                                <path d="M35.453 9.373C29.455 3.371 21.32 0 12.839 0H.116C.113 0 .127 0 .16 0v100h76.956V64.314a32.01 32.01 0 0 0-9.368-22.627L35.453 9.373z"></path>
+                              </svg>
+                            <div class="card__inner">
+                                <script>
+                                    function copyToClipboard(text) {
+                                        navigator.clipboard.writeText(text).then(function() {
+                                            alert("Text copied to clipboard: " + text);
+                                        }, function(err) {
+                                            console.error("Could not copy text: ", err);
+                                        });
+                                    }
+                                </script>
+                                <style>
+                                    .status {
+                                        color: #89EB5B;
+                                        cursor: pointer;
+                                    }
+                                </style>
+                                <div class="status" onclick="copyToClipboard('2jfFXLwPTNZjqX6paQeiHwEKM1Qe44Qh7vZDSMkLpump')" style="color:#89EB5B">2jfFXLwPTNZjqX6paQeiHwE
+                                    <br> <br> KM1Qe44Qh7vZDSMkLpump</div>
+                                <div class="solutions__title head h3">CONTRACT ADDRESS</div>
+
+                                <!-- <div class="solutions__content">Sell Luffy on 0% tax - Giving all crypto investors the best experience!!</div> -->
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            
+
+
+                            <!-- card-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- team-->
+            <!-- <div class="section team">
+                <div class="team__container container">
+                    <div class="team__head">
+                        <div class="solutions__head">
+                            <h2 class="development__title h2">Partners</h2>
+                        </div>
+                    </div>
+                    <div class="team__list">
+                        <a class="team__item" href="https://kainet.world" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="0">
+                            <div class="team__inner"><img src="img/logos/Kainet.png" alt=""></div>
+                        </a>
+
+                        <a class="team__item" href="https://spinel.finance" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="100">
+                            <div class="team__inner"><img src="img/logos/Spinel.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item" href="https://cryptoexpoasia.com/" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="200">
+                            <div class="team__inner"><img src="img/logos/ExpoAsia.png" alt=""></div>
+                        </a>
+
+                        <a class="team__item" href="https://hakitoken.com" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="300">
+                            <div class="team__inner"><img src="img/logos/Haki.png" alt=""></div>
+                        </a>
+
+                        <a class="team__item" href="https://everrise.com/everbridge" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="400">
+                            <div class="team__inner"><img src="img/logos/Everbridge.png" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://app.uniswap.org/#/swap?outputCurrency=0x54012cDF4119DE84218F7EB90eEB87e25aE6EBd7" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="500">
+                            <div class="team__inner"><img src="img/logos/Uniswap.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://pancakeswap.finance/swap?outputCurrency=0x54012cDF4119DE84218F7EB90eEB87e25aE6EBd7" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="600">
+                            <div class="team__inner"><img src="img/logos/Pancakeswap.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.gate.io/de/trade/LUFFY_USDT" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="700">
+                            <div class="team__inner"><img src="img/logos/Gate.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.mexc.com/exchange/LUFFY_USDT" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="800">
+                            <div class="team__inner"><img src="img/logos/Mexc.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.bitmart.com/trade/en?symbol=LUFFY_USDT&layout=basic" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="900">
+                            <div class="team__inner"><img src="img/logos/Bitmart.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.lbank.site/exchange/luffy/usdt" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="1000">
+                            <div class="team__inner"><img src="img/logos/Lbank.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://whitebit.com/trade/LUFFY-DECL" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="1100">
+                            <div class="team__inner"><img src="img/logos/Whitebit.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.xt.com/trade/luffy_usdt" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="1200">
+                            <div class="team__inner"><img src="img/logos/Xt.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.bkex.com/trade/LUFFY_USDT" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="1300">
+                            <div class="team__inner"><img src="img/logos/Bkex.png" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.hotbit.io/exchange?symbol=LUFFY_nUSDt" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="1400">
+                            <div class="team__inner"><img src="img/logos/Hotbit.png" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.cointiger.com/en-us/#/trade_center?coin=luffy_usdt" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="1500">
+                            <div class="team__inner"><img src="img/logos/Cointiger.png" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.coinstore.com/#/spot/LUFFYUSDT?lang=en_US" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="1600">
+                            <div class="team__inner"><img src="img/logos/Coinstore.png" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://latoken.com/exchange/LUFFY_USDT" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="1700">
+                            <div class="team__inner"><img src="img/logos/Latoken.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.ztb.im/exchange?coin=BTC_USDT" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="1800">
+                            <div class="team__inner"><img src="img/logos/Ztg.png" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.bibox.com/en/exchange/basic/mLUFFY_USDT" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="1900">
+                            <div class="team__inner"><img src="img/logos/Bibox.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://coinsbit.io/trade_classic/LUFFY_mUSDT" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="2000">
+                            <div class="team__inner"><img src="img/logos/Coinsbit.png" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.bitforex.com/en/spot/btc_usdc" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="2100">
+                            <div class="team__inner"><img src="img/logos/Bitforex.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.digifinex.com/en-ww/trade/USDT/BTC" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="2200">
+                            <div class="team__inner"><img src="img/logos/Digifinex.svg" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://azbit.com/exchange/LUFFY_USDT" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="2300">
+                            <div class="team__inner"><img src="img/logos/Azbit.png" alt=""></div>
+                        </a>
+
+                        <a class="team__item gri" href="https://www.bitrue.com/trade/luffy_usdt" target="_blank" data-aos="fadeInDown" data-aos-duration="800" data-aos-delay="2400">
+                            <div class="team__inner"><img src="img/logos/Bitrue.png" alt=""></div>
+                        </a>
+
+
+                    </div>
+                    <svg width="0" height="0" style="display: block">
+              <clipPath id="polygonPhoto" clipPathUnits="objectBoundingBox">
+                <path d="M1 1V.215C1 .196.993.177.98.162L.851.023C.838.008.819 0 .8 0H0v1"></path>
+              </clipPath>
+            </svg>
+                </div>
+            </div> -->
+
+
+
+
+
+        </div>
+
+        <!-- footer-->
+        <footer class="footer">
+            <div class="footer__container container">
+
+                <div class="footer__row">
+                    <div class="footer__copyright"><img src="img/luffyv33.png">© 2025 $GENITAL . All rights reserved.</div>
+
+                    <!-- socials-->
+                    <div class="socials" style="display: flex; justify-content: center; align-items: center;">
+                        <a class="socials__link" href="https://pump.fun/coin/2jfFXLwPTNZjqX6paQeiHwEKM1Qe44Qh7vZDSMkLpump" target="_blank">
+                <svg class="icon icon-twitter">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg></a><a class="socials__link" href="https://t.me/genitalsol" target="_blank">
+                <svg class="icon icon-telegram">
+                  <use xlink:href="#icon-telegram"></use>
+                </svg></a>
+
+                        <!-- <a class="socials__link" href="https://www.reddit.com/r/luffy_inu/" target="_blank">
+                <svg class="icon icon-reddit">
+                  <use xlink:href="#icon-reddit"></use>
+                </svg></a>
+                <a class="socials__link" href="https://medium.com/@luffytokenofficial" target="_blank">
+                <svg class="icon icon-medium">
+                  <use xlink:href="#icon-medium"></use>
+                </svg></a><a class="socials__link" href="https://discord.gg/S9Exh6We" target="_blank">
+                <svg class="icon icon-discord">
+                  <use xlink:href="#icon-discord"></use>
+                </svg></a><a class="socials__link" href="https://instagram.com/luffytoken" target="_blank">
+                <svg class="icon icon-insta">
+                  <use xlink:href="#icon-insta"></use>
+                </svg></a><a class="socials__link" href="https://www.facebook.com/groups/1254762111629194/" target="_blank">
+                <svg class="icon icon-facebook">
+                  <use xlink:href="#icon-facebook"></use>
+                </svg></a>
+             -->
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- scripts-->
+
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/aos.js"></script>
+    <script src="js/lib/scroll-lock.min.js"></script>
+    <script src="js/lib/dragScroll.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        var luffyprice = document.getElementById("luffyprice");
+
+        var livemc = {
+            "async": true,
+            "scroosDomain": true,
+            "url": "https://api.coingecko.com/api/v3/coins/luffy-inu/tickers?exchange_ids=uniswap_v2",
+            "method": "GET",
+            "headers": {}
+        }
+
+        $.ajax(livemc).done(function(response) {
+            tot = response.tickers[0];
+            loli = tot.converted_last.usd;
+            luffyprice.innerHTML = loli.toFixed(5);
+        });
+    </script>
+
+    <script>
+        var mcap = document.getElementById("mcap");
+
+        var livemc = {
+            "async": true,
+            "scroosDomain": true,
+            "url": "https://api.coingecko.com/api/v3/coins/luffy-inu/tickers?exchange_ids=uniswap_v2",
+            "method": "GET",
+            "headers": {}
+        }
+        $.ajax(livemc).done(function(response) {
+            tot = response.tickers[0];
+            loli = tot.converted_last.usd * 0.62433490933;
+            lolii = loli * 100000;
+            mcap.innerHTML = lolii.toFixed(2);
+        });
+    </script>
+    <script>
+        var luffydaily = document.getElementById("luffydaily");
+
+        var livemc = {
+            "async": true,
+            "scroosDomain": true,
+            "url": "https://api.coingecko.com/api/v3/coins/luffy-inu?tickers=false&community_data=false&developer_data=false&sparkline=false",
+
+            "method": "GET",
+            "headers": {}
+        }
+
+
+
+        $.ajax(livemc).done(function(response) {
+
+            tot = response.market_data.total_volume.usd;
+
+            luffydaily.innerHTML = tot.toLocaleString();
+
+        });
+    </script>
+    <script>
+        function CopyToClipboard(id) {
+            var r = document.createRange();
+            r.selectNode(document.getElementById(id));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+        }
+
+        var tooltip = document.querySelector('.tooltip')
+
+        tooltip.addEventListener('click', function() {
+            if (this.classList.contains('active')) {
+                this.classList.remove('active');
+            } else {
+                this.classList.add('active');
+            }
+
+        });
+    </script>
+
+    <!-- svg sprite-->
+    <div style="display: none"><svg width="0" height="0">
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-arrow-right">
+<path d="M17.762 7.841l5.38 5.38c.053.053.103.109.148.167.431.338.709.864.709 1.455 0 1.02-.827 1.846-1.846 1.846H1.846C.827 16.689 0 15.863 0 14.843s.827-1.846 1.846-1.846l15.85-.001-2.544-2.544c-.721-.721-.721-1.89 0-2.611s1.89-.721 2.611 0z"></path>
+</symbol>
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-instagram">
+<path d="M17.762 7.841l5.38 5.38c.053.053.103.109.148.167.431.338.709.864.709 1.455 0 1.02-.827 1.846-1.846 1.846H1.846C.827 16.689 0 15.863 0 14.843s.827-1.846 1.846-1.846l15.85-.001-2.544-2.544c-.721-.721-.721-1.89 0-2.611s1.89-.721 2.611 0z"></path>
+</symbol>
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-reddit">
+      <path id="Pfad_10780" data-name="Pfad 10780" class="cls-1" d="M22.73,10.35c0-1.38-1.12-2.5-2.5-2.49-.64,0-1.25,.25-1.71,.69-1.97-1.34-4.28-2.07-6.66-2.13l1.14-5.36,3.71,.8c.04,.99,.86,1.77,1.85,1.73s1.76-.87,1.72-1.86c-.04-.99-.86-1.77-1.85-1.73-.66,.02-1.25,.41-1.54,1L12.75,.12c-.11-.02-.23,0-.33,.06-.1,.06-.17,.17-.18,.29l-1.26,5.97c-2.41,.03-4.76,.77-6.76,2.13-.98-.96-2.56-.94-3.51,.05-.96,.99-.93,2.57,.05,3.53,.21,.2,.45,.37,.71,.49-.04,.25-.06,.5-.06,.76,0,3.84,4.46,6.97,9.96,6.97s9.96-3.11,9.96-6.97c0-.25-.02-.51-.06-.76,.89-.41,1.47-1.3,1.47-2.29h0Zm-17.06,1.78c0-.98,.79-1.78,1.77-1.78,.98,0,1.77,.8,1.77,1.78,0,.98-.79,1.78-1.77,1.78h0c-.98,0-1.77-.8-1.77-1.78Zm9.92,4.72c-1.22,1.23-3.54,1.31-4.21,1.31s-3.01-.1-4.21-1.31c-.18-.18-.18-.47,0-.65s.47-.18,.65,0c1.03,.75,2.29,1.12,3.56,1.04,1.27,.08,2.53-.29,3.56-1.04,.18-.18,.46-.18,.64,0,0,0,0,0,0,0,.16,.19,.16,.47,0,.65Zm-.33-2.92c-.98,0-1.77-.8-1.77-1.78,0-.98,.79-1.78,1.77-1.78,.98,0,1.77,.8,1.77,1.78h0c0,.98-.79,1.77-1.77,1.77h0Z"/>
+</symbol>
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-medium">
+ <path id="Pfad_6611" data-name="Pfad 6611" class="cls-1" d="M12.37,6.23c-.02,3.41-2.81,6.16-6.23,6.14C2.73,12.34-.02,9.56,0,6.14,.02,2.74,2.78,0,6.18,0c3.43,.01,6.19,2.8,6.18,6.23h0"/>
+  <path id="Pfad_6612" data-name="Pfad 6612" class="cls-1" d="M19.15,6.23c0,3.24-1.38,5.86-3.09,5.86s-3.09-2.62-3.09-5.86S14.35,.37,16.06,.37s3.09,2.62,3.09,5.86"/>
+  <path id="Pfad_6613" data-name="Pfad 6613" class="cls-1" d="M21.92,6.23c0,2.9-.49,5.25-1.09,5.25s-1.09-2.35-1.09-5.25,.49-5.25,1.09-5.25,1.09,2.35,1.09,5.25"/>
+</symbol>
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-insta">
+  <path class="cls-1" d="M22.47,15.92c-.05,1.2-.25,2.02-.52,2.74-.29,.74-.67,1.37-1.3,2-.63,.63-1.26,1.01-2,1.3-.72,.28-1.54,.47-2.74,.52-1.2,.05-1.59,.07-4.65,.07s-3.45-.01-4.65-.07c-1.2-.05-2.02-.25-2.74-.52-.74-.29-1.37-.67-2-1.3-.63-.63-1.01-1.26-1.3-2-.28-.72-.47-1.54-.52-2.74-.05-1.2-.07-1.59-.07-4.65s.01-3.45,.07-4.65c.05-1.2,.25-2.02,.52-2.74,.29-.74,.67-1.37,1.3-2S3.15,.88,3.89,.59c.72-.28,1.54-.47,2.74-.52,1.2-.05,1.59-.07,4.65-.07s3.45,.01,4.65,.07c1.2,.05,2.02,.25,2.74,.52,.74,.29,1.37,.67,2,1.3,.63,.63,1.01,1.26,1.3,2,.28,.72,.47,1.54,.52,2.74,.05,1.2,.07,1.59,.07,4.65s-.01,3.44-.07,4.65Zm-2.42-11.29c-.2-.53-.45-.9-.84-1.3-.39-.39-.77-.64-1.3-.84-.4-.15-.99-.34-2.09-.39-1.19-.05-1.55-.07-4.55-.07s-3.37,.01-4.55,.07c-1.1,.05-1.7,.23-2.09,.39-.53,.2-.9,.45-1.3,.84s-.64,.77-.84,1.3c-.15,.4-.34,.99-.39,2.09-.05,1.19-.07,1.54-.07,4.55s.01,3.37,.07,4.55c.05,1.1,.23,1.7,.39,2.09,.2,.53,.45,.9,.84,1.3s.77,.64,1.3,.84c.4,.15,.99,.34,2.09,.39,1.19,.05,1.54,.07,4.55,.07s3.37-.01,4.55-.07c1.1-.05,1.7-.23,2.09-.39,.53-.2,.9-.45,1.3-.84s.64-.77,.84-1.3c.15-.4,.34-.99,.39-2.09,.05-1.19,.07-1.55,.07-4.55s-.01-3.37-.07-4.55c-.05-1.1-.23-1.7-.39-2.09Zm-8.79,12.43c-3.2,0-5.79-2.59-5.79-5.79s2.59-5.79,5.79-5.79,5.79,2.59,5.79,5.79c0,3.2-2.59,5.79-5.79,5.79Zm6.02-10.45c-.75,0-1.35-.61-1.35-1.35s.61-1.35,1.35-1.35,1.35,.61,1.35,1.35-.61,1.35-1.35,1.35Z"/>
+</symbol>
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-facebook">
+<path d="M10.105 20.035v-6.964h-2.39V9.857h2.39V7.612c0-2.445 1.548-3.648 3.729-3.648 1.045 0 1.943.078 2.204.113v2.555l-1.513.001c-1.186 0-1.454.564-1.454 1.391v1.833h3.214l-1.071 3.214h-2.143v6.964h-2.967z"></path>
+</symbol>
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-discord">
+<path d="M17.743 3.429a1.76 1.76 0 0 1 1.245.52 1.76 1.76 0 0 1 .512 1.248h0v15.375l-1.843-1.629-1.037-.96-1.097-1.018.454 1.586h-9.72a1.76 1.76 0 0 1-1.245-.52 1.76 1.76 0 0 1-.512-1.248h0V5.197a1.76 1.76 0 0 1 .512-1.248 1.76 1.76 0 0 1 1.245-.52h0zm-4.329 3.994l-.12.137c.781.208 1.508.579 2.134 1.089a6.99 6.99 0 0 0-2.58-.823 7.25 7.25 0 0 0-1.731.017c-.049.001-.098.007-.146.017-.674.076-1.331.259-1.948.54l-.506.249c.66-.535 1.429-.919 2.254-1.123h0l-.086-.103a4.24 4.24 0 0 0-2.411.9 11.48 11.48 0 0 0-1.232 4.997c.296.415.689.751 1.144.978a3.11 3.11 0 0 0 1.47.325l.574-.711c-.603-.152-1.133-.51-1.5-1.011a5.14 5.14 0 0 0 .981.508c.408.161.83.284 1.26.369.733.141 1.486.144 2.22.008a5.64 5.64 0 0 0 1.243-.369c.347-.131.677-.3.986-.506-.381.512-.932.873-1.554 1.018l.566.696a3.13 3.13 0 0 0 2.623-1.305 11.48 11.48 0 0 0-1.232-4.997 4.24 4.24 0 0 0-2.411-.9h0zm.046 3.194l.115.003a.91.91 0 0 1 .637.294.91.91 0 0 1 .185.305c.041.113.059.233.054.353 0 .192-.058.38-.166.538s-.262.281-.441.351-.375.084-.562.041-.357-.142-.487-.283-.215-.319-.242-.509.002-.384.087-.557.219-.316.386-.411.359-.137.55-.122zm-3.014.003a.91.91 0 0 1 .637.292.91.91 0 0 1 .239.659.91.91 0 0 1-.24.658.91.91 0 0 1-.636.293c-.239-.02-.462-.128-.624-.305s-.252-.407-.252-.647.09-.471.252-.647.385-.285.624-.305z"></path>
+</symbol>
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-instagram">
+<path d="M15.392 3.857a4.76 4.76 0 0 1 4.746 4.532l.005.217v6.786a4.76 4.76 0 0 1-4.532 4.746l-.217.005H8.608a4.76 4.76 0 0 1-4.746-4.532l-.005-.217V8.608a4.76 4.76 0 0 1 4.532-4.746l.217-.005h6.786zM12 7.928c-2.245 0-4.071 1.826-4.071 4.071S9.754 16.071 12 16.071s4.071-1.826 4.071-4.071S14.245 7.928 12 7.928zm0 1.357c1.499 0 2.714 1.215 2.714 2.714S13.499 14.714 12 14.714 9.286 13.499 9.286 12 10.501 9.286 12 9.286zm4.75-2.714a.68.68 0 0 0-.679.679.68.68 0 0 0 .679.679.68.68 0 0 0 .679-.679.68.68 0 0 0-.679-.679z"></path>
+</symbol>
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-telegram">
+<path d="M20.537 5.233c-.014-.063-.044-.122-.088-.169s-.099-.083-.161-.102c-.225-.044-.458-.028-.674.048 0 0-15.02 5.398-15.877 5.996-.185.129-.247.203-.278.291-.148.425.313.613.313.613l3.871 1.262a.43.43 0 0 0 .196-.012l9.321-5.764c.072-.022.126 0 .114.054-.189.646-7.079 6.77-7.118 6.807-.018.015-.033.035-.042.057s-.013.046-.011.07l-.36 3.777s-.151 1.179 1.025 0c.834-.835 1.634-1.526 2.036-1.862 1.331.919 2.764 1.935 3.381 2.464.104.101.226.179.361.232s.279.076.423.072c.589-.023.75-.667.75-.667s2.736-11.012 2.829-12.487c.009-.145.021-.237.022-.336.005-.115-.006-.23-.034-.342z"></path>
+</symbol>
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-twitter">
+<path d="M20.571 6.697c-.643.268-1.286.482-2.036.536.75-.429 1.286-1.125 1.554-1.929-.696.429-1.446.696-2.25.857-.643-.696-1.554-1.125-2.518-1.125-1.929 0-3.536 1.554-3.536 3.536 0 .268.054.536.107.804-2.946-.161-5.518-1.554-7.286-3.696a3.37 3.37 0 0 0-.482 1.768c0 1.232.643 2.304 1.554 2.946-.589 0-1.125-.161-1.607-.429v.054c0 1.714 1.232 3.107 2.839 3.429-.321.053-.589.107-.911.107-.214 0-.429 0-.643-.054.429 1.393 1.768 2.411 3.268 2.464-1.179.964-2.732 1.5-4.393 1.5-.268 0-.589 0-.857-.054 1.607.964 3.482 1.554 5.464 1.554 6.482 0 10.018-5.357 10.018-10.018v-.429c.643-.536 1.232-1.125 1.714-1.821z"></path>
+</symbol>
+</svg>
+    </div>
+    <script>
+        (function() {
+            function c() {
+                var b = a.contentDocument || a.contentWindow.document;
+                if (b) {
+                    var d = b.createElement('script');
+                    d.innerHTML = "window.__CF$cv$params={r:'895ba89cbc0271c8',t:'MTcxODcxNzY4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+                    b.getElementsByTagName('head')[0].appendChild(d)
+                }
+            }
+            if (document.body) {
+                var a = document.createElement('iframe');
+                a.height = 1;
+                a.width = 1;
+                a.style.position = 'absolute';
+                a.style.top = 0;
+                a.style.left = 0;
+                a.style.border = 'none';
+                a.style.visibility = 'hidden';
+                document.body.appendChild(a);
+                if ('loading' !== document.readyState) c();
+                else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c);
+                else {
+                    var e = document.onreadystatechange || function() {};
+                    document.onreadystatechange = function(b) {
+                        e(b);
+                        'loading' !== document.readyState && (document.onreadystatechange = e, c())
+                    }
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>
